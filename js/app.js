@@ -13,6 +13,67 @@ console.log("something is definitely happening");
 
 // Palindromes
 
+// // function palindrome(str) { 
+//   console.log(palindrome);
+// }
+// palindrome();
+
+// const palindrome = (str) => {
+// 	conastif (input.length > 10) { //pro tip -- strings also have a .length
+// 		console.log("input length is gt 10");
+// 	} else {
+// 		console.log("input length is not gt 10");
+// 	}
+// }
+// checkInputLength("Horse")
+// checkInputLength("Horse drawn carriage")
+
+// why can't I use the above to make this work???
+
+const palindrome = (str)  => {
+	let re = /[^A-Za-z0-9]/g; // regular expression that removes // basically this is remvoing anything that passes thorugh the loop
+								// that doesn't match (all non-lowercase and numerical characters ). removes unwanted characters 
+								// but how would i be supposed to know that? wihtouth looking it up?
+								// also need to make all the characters in the string lowercase
+	str = str.toLowerCase().replace(re, ''); // replaces all the characters in the string with ONLY LOWERCASE LETTERS 
+											// (so it's not reading
+											// periodds or spaces, etc.) AND 
+											// THEN it reverses the order of those characters (so we cna in the next steps check if it's 
+											// a true palindrom
+
+	let len = str.length;					// checking the length in teh string (for eyeball -- its 7)
+	for(let i = 0; i < len/2; i++) {		// a for loop thats going to -- As long as the characters from each part match, 
+											//the FOR loop will go on
+   											// When the characters don't match anymore, false is returned and we exit the FOR loop
+											// i starts at 0, then goes up by 1 until it gets to half the amopunt of characters in "racecar"
+											// so the first iteration is going to be "i=0," then "is i less than str.length (which is 7 for racecar"
+											// the answer to that is yes, then, "then we add 1 to increment (i++)"
+		if(str[i] !== str[len - 1 - i]) {	// now -- the string length (len) minus 1 ( - 1) then minus i (-i) which is 0 in the firsd iteration
+											// so basically -- index 0 = "r" (first index, first character)
+											// then why does str[15 - 1 - 0] also mean "r"?  ; because it's saying
+											// r ==! r
+			console.log("false");
+		}
+	}
+	console.log("true"); // will print false a few times before true ?? not sure why -- if it's not a palindrom iun the () below
+}
+palindrome("racecar");
+
+
+// {
+//  var re = /[^A-Za-z0-9]/g;
+//  str = str.toLowerCase().replace(re, '');
+//  var len = str.length;
+//  for (var i = 0; i < len/2; i++) {
+//    if (str[i] !== str[len - 1 - i]) {
+//        console.log("false");
+//    }
+//  }
+//  console.log("true");
+// }
+// palindrome("A man, a plan, a canal. Panama");
+
+
 // const ifItIsPalindrome = (str) => { // set up the function
 // 	const lowerstr = str.toLowerCase() // from MDN -- ](str.toLowerCase()); -- The toLowerCase() 
 // 	//method returns the calling string value converted to lower case.
@@ -77,9 +138,6 @@ console.log("something is definitely happening");
 
 
 
-
-
-
 // Digit Sum
 // Write a function sumDigits that accepts a number and returns the sum of its digits. If you happen to end up in 
 // a situation where you might find it helpful to use the sumArray function you just wrote, then by all means....
@@ -106,7 +164,6 @@ console.log("something is definitely happening");
 // }
 // 	console.log(checkPrime);	
 // Hint: Check every number up to the square root. To do this, try a for loop.
-
 
 
 
