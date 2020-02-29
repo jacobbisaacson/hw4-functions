@@ -57,23 +57,12 @@ const palindrome = (str)  => {
 	}
 	console.log("true"); // will print false a few times before true ?? not sure why -- if it's not a palindrom iun the () below
 }
-palindrome("racecar");
+palindrome("racecar"); // when this is NOT a palindrom, get's 3 falses's in the cl then a "true??"
+
+// BACK TO REVIEW -- do i need to be using Math.floor here? -- will commit and go back if feedback comes back
 
 
-// {
-//  var re = /[^A-Za-z0-9]/g;
-//  str = str.toLowerCase().replace(re, '');
-//  var len = str.length;
-//  for (var i = 0; i < len/2; i++) {
-//    if (str[i] !== str[len - 1 - i]) {
-//        console.log("false");
-//    }
-//  }
-//  console.log("true");
-// }
-// palindrome("A man, a plan, a canal. Panama");
-
-
+/// FROM SAM AND IZZY
 // const ifItIsPalindrome = (str) => { // set up the function
 // 	const lowerstr = str.toLowerCase() // from MDN -- ](str.toLowerCase()); -- The toLowerCase() 
 // 	//method returns the calling string value converted to lower case.
@@ -86,6 +75,46 @@ palindrome("racecar");
 // 	} 
 // } 
 // console.log(ifItIsPalindrome("racecar"))
+
+
+// Write a function sumArray that takes an array as an argument. The array should contain numbers. 
+// The function should return the sum of the numbers in the array.
+// Use a for loop within the function to iterate over the array and sum the contents.
+// DO NOT use .reduce().
+// As we showed you in class, use a variable such as:
+
+// let sum = 0;
+// that will accumulate value within the loop. Expected result:
+
+// console.log(sumArray([1, 2, 3, 4, 5, 6]));
+// => 21	
+
+const sumArray = (a, b, c, d)  => {
+	const returnSum = a + b + c + d
+	return returnSum
+}
+const sum = sumArray(1, 2, 3, 4)
+console.log(sum);
+
+
+
+
+
+
+
+// const sumArray = ()  => {           		// creating the function
+// 	const sum = [2, 4, 6, 8];				// create the array inside the fuction (numbers)
+// 	let length = sum.length;				// using variable for the loop to use to iterate (the length of the array)
+// 	for(let i = 0; i < length; i++) {		// to iterate over the array
+// 		if(i < length) {					// trying to make it say, if the variable [i] is less than the the length of the array
+// 			return i						// then return the sum whatever element its looping on + the next element in the array???
+// 		}
+// 	}
+
+// console.log(sum);
+// }
+// sumArray()
+
 
 
 // const sumArray = (array) => { [] }
@@ -103,19 +132,6 @@ palindrome("racecar");
 // 	if(sum < 100)
 // }
 // console.log(sumArray([1, 2, 3, 4, 5, 6]));
-
-
-// Write a function sumArray that takes an array as an argument. The array should contain numbers. 
-// The function should return the sum of the numbers in the array.
-// Use a for loop within the function to iterate over the array and sum the contents.
-// DO NOT use .reduce().
-// As we showed you in class, use a variable such as:
-
-// let sum = 0;
-// that will accumulate value within the loop. Expected result:
-
-// console.log(sumArray([1, 2, 3, 4, 5, 6]));
-// => 21	
 
 
 //for (initializer; exit-condition; final-expression) {
