@@ -89,18 +89,42 @@ palindrome("racecar"); // when this is NOT a palindrom, get's 3 falses's in the 
 // console.log(sumArray([1, 2, 3, 4, 5, 6]));
 // => 21	
 
-const sumArray = (a, b, c, d)  => {
-	const returnSum = a + b + c + d
-	return returnSum
+// const sumArray = (a, b, c, d)  => {
+// 	const returnSum = a + b + c + d
+// 	return returnSum
+// }
+// const sum = sumArray(1, 2, 3, 4)
+// console.log(sum);
+
+// THE PROBLEM WITH THIS IS THAT IF 
+//I HAD AN ARRAY WITH 1000's of NUMBERS IN IT, 
+//this would be a nightmare to code.
+
+const numsToSum = [1, 5, 10]
+const sumArray = (arr1) => {
+	let sum = 0
+	for(let i = 0; i < arr1.length; i++) {
+		console.log(arr1);
+		}
 }
-const sum = sumArray(1, 2, 3, 4)
-console.log(sum);
+sumArray(numsToSum)
 
 
 
 
 
 
+
+
+
+
+// const exampleArray = [1, 2, 3]
+// const exampleFunction = (arr1) => {
+// 	for(let i = 0; i < arr1.length; i++){
+// 		console.log(arr1[i]);
+// 	}
+// }
+// exampleFunction(exampleArray)
 
 // const sumArray = ()  => {           		// creating the function
 // 	const sum = [2, 4, 6, 8];				// create the array inside the fuction (numbers)
@@ -153,10 +177,11 @@ console.log(sum);
 // // sumArray([2, 4, 6, 8]);
 
 
-
 // Digit Sum
 // Write a function sumDigits that accepts a number and returns the sum of its digits. If you happen to end up in 
 // a situation where you might find it helpful to use the sumArray function you just wrote, then by all means....
+
+
 
 // console.log(sumDigits(42));
 // 🔴 Commit your work!
