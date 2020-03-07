@@ -59,131 +59,40 @@ const palindrome = (str)  => {
 }
 palindrome("racecar"); // when this is NOT a palindrom, get's 3 falses's in the cl then a "true??"
 
-// BACK TO REVIEW -- do i need to be using Math.floor here? -- will commit and go back if feedback comes back
+// sumArray
 
-
-/// FROM SAM AND IZZY
-// const ifItIsPalindrome = (str) => { // set up the function
-// 	const lowerstr = str.toLowerCase() // from MDN -- ](str.toLowerCase()); -- The toLowerCase() 
-// 	//method returns the calling string value converted to lower case.
-// 	const lenstr = lowerstr.length
-// 	const lenMid = Math.floor(lenstr / 2) // need to iterate over broken string (divide by 2 breaks in half)
-// 	for (let i = 0; i < lenMid; i++) {
-// 		if (lowerstr[i] !== lowerstr[lenstr -1 -i ]) { // strick compairison for string's index [i] with strings length (minus 1)
-// 			return false // it it doesnt, then return false
-// 		} return true // but if it does, then yes.
-// 	} 
-// } 
-// console.log(ifItIsPalindrome("racecar"))
-
-
-// Write a function sumArray that takes an array as an argument. The array should contain numbers. 
-// The function should return the sum of the numbers in the array.
-// Use a for loop within the function to iterate over the array and sum the contents.
-// DO NOT use .reduce().
-// As we showed you in class, use a variable such as:
-
-// let sum = 0;
-// that will accumulate value within the loop. Expected result:
-
-// console.log(sumArray([1, 2, 3, 4, 5, 6]));
-// => 21	
-
-// const sumArray = (a, b, c, d)  => {
-// 	const returnSum = a + b + c + d
-// 	return returnSum
-// }
-// const sum = sumArray(1, 2, 3, 4)
-// console.log(sum);
-
-// THE PROBLEM WITH THIS IS THAT IF 
-//I HAD AN ARRAY WITH 1000's of NUMBERS IN IT, 
-//this would be a nightmare to code.
-
-const numsToSum = [1, 5, 10]
-const sumArray = (arr1) => {
-	let sum = 0
-	for(let i = 0; i < arr1.length; i++) {
-		console.log(arr1);
-		}
+let sum = 0;
+function sumArray(anArray) {
+	for(let i = 0; i < anArray.length; i++) {
+		sum += anArray[i]
+	}
+	return sum
 }
-sumArray(numsToSum)
-
-
-
-
-
-
-
-
-
-
-// const exampleArray = [1, 2, 3]
-// const exampleFunction = (arr1) => {
-// 	for(let i = 0; i < arr1.length; i++){
-// 		console.log(arr1[i]);
-// 	}
-// }
-// exampleFunction(exampleArray)
-
-// const sumArray = ()  => {           		// creating the function
-// 	const sum = [2, 4, 6, 8];				// create the array inside the fuction (numbers)
-// 	let length = sum.length;				// using variable for the loop to use to iterate (the length of the array)
-// 	for(let i = 0; i < length; i++) {		// to iterate over the array
-// 		if(i < length) {					// trying to make it say, if the variable [i] is less than the the length of the array
-// 			return i						// then return the sum whatever element its looping on + the next element in the array???
-// 		}
-// 	}
-
-// console.log(sum);
-// }
-// sumArray()
-
-
-
-// const sumArray = (array) => { [] }
-// let sum = 10;
-// for(let i = 0; i < sum; i++) {
-// 	if(array[i]
-// }
-// console.log(sumArray);
-
-
-// const sumArray = (add) => { [] }
-// const sum = [10, 20, 30, 40] // sums to 100
-// for(let i = 0; i < sum; i++) { // iterating over the numbers in the array??  want to make the loop continue looping (while adding 1 
-// 	//eacht time until it gets to 100 (or whatever))
-// 	if(sum < 100)
-// }
-// console.log(sumArray([1, 2, 3, 4, 5, 6]));
-
-
-//for (initializer; exit-condition; final-expression) {
-  // code to run
-// }
-
-
-// function sumArray(arrayNumbers) {
-// 	let arrayNumbers = []
-// }
-
-// f//or(let i = 0; i < sumArray.length; i++) { // using a loop to run the code untl it runs the amount of elements in the array
-// // 		if i 								// need to first find a way to add the numbers in the array to get a sum
-// // 										// before that probably need to use the indeex, in a [adding each on index nu ber]
-// // 										// can i use findindex?
-// // 	}
-// // 	console.log(arrayNumbers)
-// // }
-// // sumArray([2, 4, 6, 8]);
+	console.log(sumArray([1, 4, 6, 7]));
 
 
 // Digit Sum
 // Write a function sumDigits that accepts a number and returns the sum of its digits. If you happen to end up in 
 // a situation where you might find it helpful to use the sumArray function you just wrote, then by all means....
 
+// NEED TO.STRING() mdn
+// NEED PARSEINT() mdn -- parses a string argument and returns an integer
 
 
-// console.log(sumDigits(42));
+const sumDigits = (str) => {
+	const digitString = str.toString();  // will turn the inout into a string (so we can add their values)
+	let digitArray = []; // need array (empty now, but will take the input we give it)
+	for(let i = 0; i < digitString.length; i++) { // same loop as above (prettymuch)
+		digitArray.push(digitString[i])
+	}
+		return sumArray(digitArray) // prints NAN's .. now printing a 18324 (which is 18 from sumArray then 324 from sumDigits
+}
+console.log(sumDigits(324));
+
+//I can't figure this OUT!!  Get with Timm/Deja/Fatima/Nate
+
+
+
 // 🔴 Commit your work!
 // Your commit message should read something like:
 // "sum array completed"
