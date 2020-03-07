@@ -92,11 +92,6 @@ console.log(sumDigits(324));
 //I can't figure this OUT!!  Get with Timm/Deja/Fatima/Nate
 
 
-
-// 🔴 Commit your work!
-// Your commit message should read something like:
-// "sum array completed"
-
 // Prime Numbers
 // A Prime number is an integer greater than 1 that is evenly divisible only by 1 and itself. If you want 
 // to read more deeply about it, go here. To test whether a number is Prime, you only need to test as far as the 
@@ -105,16 +100,33 @@ console.log(sumDigits(324));
 // Step One
 // Write a function called checkPrime that will test whether a number is Prime. The function will return true 
 // (Boolean) if Prime, false if not.
-
-// const checkPrime = (prime)  => {
-// 	for(let i = 0; i < Math.sqrt(prime); i++) {
-// 		if
-// 	}
-// 	if(primeNumber %)
-// }
-// 	console.log(checkPrime);	
 // Hint: Check every number up to the square root. To do this, try a for loop.
 
+const checkPrime = (test) => {
+	let primeNums = Math.sqrt(test);
+	for(let i = 1; i <= test; i++) {
+		if(test[i] === 0) {
+			return false
+		} else {
+			return true
+		}
+	}
+}
+console.log(checkPrime(81)); // undefined's
+console.log(checkPrime(3));	// now saying true for all
+console.log(checkPrime(7));
+console.log(checkPrime(9));
+
+
+const printPrimes = (print) => {
+	for(let i = 0; i <= print; i++) {
+		if checkPrime[i] = true
+	} return 
+}
+printPrimes(97)
+console.log(printPrimes(97));
+
+//I can't figure this OUT!!  Get with Timm/Deja/Fatima/Nate
 
 
 // Step Two
