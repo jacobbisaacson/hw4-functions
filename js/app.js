@@ -118,13 +118,13 @@ console.log(checkPrime(7));
 console.log(checkPrime(9));
 
 
-const printPrimes = (print) => {
-	for(let i = 0; i <= print; i++) {
-		if checkPrime[i] = true
-	} return 
-}
-printPrimes(97)
-console.log(printPrimes(97));
+// const printPrimes = (print) => {
+// 	for(let i = 0; i <= print; i++) {
+// 		if checkPrime[i] = true
+// 	} return
+// }
+// printPrimes(97)
+// console.log(printPrimes(97));
 
 //I can't figure this OUT!!  Get with Timm/Deja/Fatima/Nate
 
@@ -135,18 +135,67 @@ console.log(printPrimes(97));
 
 // This function should call the previous checkPrime function.
 
-// 🔴 Commit your work!
-// Your commit message should read something like:
-// "prime numbers completed"
+
+const randomMove = () => {
+	const rps = ["rock", "paper", "scissors"]
+	const play = Math.floor(Math.random())
+}
+	console.log(randomMove()) // printing undefined
+
+
 
 // Rock Paper Scissors
-// Create the rock paper scissors game for the console! Rock paper scissors is a game of chance where two players 
-// throw out one of the three options, rock, paper, or scissors. To determine who wins, use the following guidelines: 
-// rock beats scissors, scissors beats paper, paper beats rock.
 
-// Write a function called randomMove that returns a randomly chosen move (rock, paper, or scissors).
+// Write a function called randomMove that returns a randomly chosen move (rock, paper, or scissors). -- ...?
+
 // Then create a function called rockPaperScissors that runs one round of the game. It should accept two arguments, 
 // the computer's move and the user's move, and somehow compare the two to decide who the winner is and return who won.
+
+const rockPaperScissors = (compsMove, playersMove) => {
+	console.log(compsMove);
+	console.log(playersMove);
+	if(compMove === "rock") {
+		if(playersMove === "rock") {
+			console.log("draw");
+		}
+		if(playersMove === "paper") {
+			console.log("player wins");
+		}
+		if(playersMove === "scissors")
+			console.log("computer wins");
+	}
+	if(compsMove === "paper") {
+		if(playersMove === "rock") {
+			console.log("computer wins");
+		}
+		if(playersMove === "paper") {
+			console.log("draw");
+		}
+		if(playersMove === "scissors")
+			console.log("player wins");	
+	}
+	if(compsMove === "scissors") {
+		if(playersMove === "rock") {
+			console.log("player wins");
+		}
+		if(playersMove === "paper") {
+			console.log("comp wins");
+		}
+		if(playersMove === "scissors")
+			console.log("draw");
+	}
+
+}
+let compsMove = randomMove() // this isn't working because the above isn't working.
+let playersMove = "paper"
+console.log(rockPaperScissors);
+rockPaperScissors(compsMove, playersMove)
+
+// get with the TA's on this one too
+// reminder to discss wth TA how im doing this (with the functions lesson open, my notes open, and re-reading, but not able to
+// apply the concetps from the lesson to the labs / HW's)
+
+
 // let computersMove = randomMove();
 // => rock
 
