@@ -53,8 +53,6 @@ function palindrome(str) {
 }
 
 
-
-
 console.log(palindrome("Yrgserger"));
 console.log(palindrome("racecar"));
 console.log(palindrome("WOW"));
@@ -64,7 +62,8 @@ console.log(palindrome("something"));
 
 // Try to keep your comments in line with your code as opposed to off to the side, 
 // this will help you read your code more clearly and see what each line is doing. 
-// Let's take a look at this problem together later to see if I can help you wrap your mind around it.
+// Let's take a look at this problem together later to see if 
+// I can help you wrap your mind around it.
 
 
 
@@ -95,7 +94,7 @@ const digitSum = (num) => {
 }
 
 	console.log(digitSum(132)); // adding the sumarry and digit array intergers
-	
+
 
 
 // // NEED TO.STRING() mdn
@@ -124,12 +123,13 @@ const digitSum = (num) => {
 // // square root of that number. This is advisable for optimization and testing large numbers.
 
 // // Step One
-// // Write a function called checkPrime that will test whether a number is Prime. The function will return true 
+// // Write a function called checkPrime that will test whether a number is Prime. 
+// The function will return true 
 // // (Boolean) if Prime, false if not.
 // // Hint: Check every number up to the square root. To do this, try a for loop.
 
 // const checkPrime = (test) => {
-// 	let primeNums = Math.sqrt(test);
+// 	// let primeNums = Math.sqrt(test);
 // 	for(let i = 1; i <= test; i++) {
 // 		if(test[i] === 0) {
 // 			return false
@@ -138,12 +138,38 @@ const digitSum = (num) => {
 // 		}
 // 	}
 // }
-// console.log(checkPrime(81)); // undefined's
-// console.log(checkPrime(3));	// now saying true for all
-// console.log(checkPrime(7));
-// console.log(checkPrime(9));
 
 
+const checkPrime = (num) => {
+	if(num === 1) {
+		return false
+	} else if(num === 2) {
+		return true
+	} else {
+		for(let i = 2; i < num; i++) {
+			if(num % i === 0) { //
+				return false
+			}
+		}
+	} return true
+}
+
+
+console.log(checkPrime(3)); // undefined's
+console.log(checkPrime(7));	// now saying true for all
+console.log(checkPrime(81));
+console.log(checkPrime(9));
+
+
+
+const printPrime = (num) => {
+	for(let i = 2; i < num; i++) {
+		if(checkPrime(i) !== false) {
+			console.log(i);
+		}
+	}
+}
+printPrime(97)
 // // Getting all trues for this, I wonder if that has something to do with your declaring a variable within 
 // // the function but not using it for anything? Take a look at that, chat with one of us if you need more help.
 
