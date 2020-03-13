@@ -33,7 +33,7 @@ function palindrome(str) {
   const split_string = lowercased_string.split(" ");
 
   const join_string = split_string.join("");
-  
+
 
   const  split_string_2 = join_string.split("");
 
@@ -70,19 +70,33 @@ console.log(palindrome("something"));
 
 // sumArray
 
-// let sum = 0;
-// function sumArray(anArray) {
-// 	for(let i = 0; i < anArray.length; i++) {
-// 		sum += anArray[i]
-// 	}
-// 	return sum
-// }
-// 	console.log(sumArray([1, 4, 6, 7]));
+let sum = 0;
+function sumArray(anArray) {
+	for(let i = 0; i < anArray.length; i++) {
+		sum += anArray[i]
+	}
+	return sum
+}
+	console.log(sumArray([1, 4, 6, 80]));
 
 
 // // Digit Sum
 // // Write a function sumDigits that accepts a number and returns the sum of its digits. If you happen to end up in 
 // // a situation where you might find it helpful to use the sumArray function you just wrote, then by all means....
+
+const digitSum = (num) => {
+	let nums = [],
+	numStr = num.toString()
+	for(let i = 0; i < numStr.length; i++) {
+		let ints = parseInt(numStr[i], 9)
+		nums.push(ints)
+	}
+	return sumArray(nums)
+}
+
+	console.log(digitSum(132)); // adding the sumarry and digit array intergers
+	
+
 
 // // NEED TO.STRING() mdn
 // // NEED PARSEINT() mdn -- parses a string argument and returns an integer
